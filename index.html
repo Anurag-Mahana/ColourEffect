@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnMouseMove</title>
+    <style>
+        #container {
+            position: relative;
+            top: 200px;
+            left: 40%;
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius:20px;
+            box-shadow: 0 0 10px black;
+            font-size: 32px;
+        }
+
+        #container p {
+            text-align: center;
+        }
+        /* #container p:hover{
+            border: 2px solid rgb(255, 255, 255);
+        } */
+        a{
+            transition: 0.2s;
+        }
+        p a:hover{
+            color: white;
+            font-size: 50px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" onmousemove="myFunction(event)" onmouseleave="func2()">
+
+        <p>
+
+            <a id="green" onmousemove="green1()">Fresh Green</a><br>
+            <a id="blue" onmousemove="blue1()">Bright blue</a><br>
+            <a id="red" onmousemove="red1()">Hot red</a><br>
+            <a id="grey" onmousemove="grey1()">Dull grey</a><br>
+            <a id="pink" onmousemove="pink1()">Cute pink</a><br>
+            <a id="yellow" onmousemove="yellow1()">New yellow</a><br>
+        </p>
+    </div>
+    <script>
+        function green1() {
+            document.bgColor = 'green';
+        }
+
+        // ----------------TO CHANGE COLOR OF A DIV-----------------------
+        // function green1() {
+        //     document.getElementById("container").style.backgroundColor='green';
+        // }
+
+        function blue1() {
+            document.bgColor = 'blue';
+        }
+        function red1() {
+            document.bgColor = 'red';
+        }
+        function grey1() {
+            document.bgColor = 'grey';
+        }
+        function pink1() {
+            document.bgColor = 'pink';
+        }
+        function yellow1() {
+            document.bgColor = 'yellow';
+        }
+        function func2() {
+            document.bgColor = 'white';
+        }
+
+
+    </script>
+</body>
+
+</html>
